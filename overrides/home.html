@@ -1,0 +1,278 @@
+{% extends "main.html" %}
+
+{% block tabs %}{{ super() }}
+
+<div class="pf-wrap">
+
+<!-- ═══════════════════════════════════ HERO ═══════════════════════════════════ -->
+<section class="pf-section pf-hero" id="home">
+  <div class="pf-container">
+    <div class="pf-hero__grid">
+      <div>
+        <span class="pf-badge">
+          <span data-ka="თანამშრომლობისთვის ღია" data-en="Available for collaboration">თანამშრომლობისთვის ღია</span>
+        </span>
+        <h1 class="pf-hero__name">
+          <span data-ka="გიორგი" data-en="Giorgi">გიორგი</span><br>
+          <span class="pf-accent">კაპანაძე</span>
+        </h1>
+        <p class="pf-hero__subtitle">
+          <span data-ka="GIS &amp; დისტანციური ზონდირების სპეციალისტი" data-en="GIS &amp; Remote Sensing Specialist">GIS &amp; დისტანციური ზონდირების სპეციალისტი</span>
+        </p>
+        <p class="pf-hero__location">
+          📍 <span data-ka="ჭიათური, საქართველო" data-en="Chiatura, Georgia">ჭიათური, საქართველო</span>
+        </p>
+        <div class="pf-hero__actions">
+          <a href="#projects" class="pf-btn pf-btn--primary">
+            <span data-ka="პროექტები →" data-en="View Projects →">პროექტები →</span>
+          </a>
+          <a href="https://github.com/ezdanapak" class="pf-btn pf-btn--outline" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://sites.google.com/view/gisgeo/" class="pf-btn pf-btn--outline" target="_blank" rel="noopener">
+            <span data-ka="ვებ-გვერდი ↗" data-en="Website ↗">ვებ-გვერდი ↗</span>
+          </a>
+        </div>
+        <div class="pf-stats">
+          <div><span class="pf-stat__value">10+</span><span class="pf-stat__label" data-ka="წელი GIS-ში" data-en="Years in GIS">წელი GIS-ში</span></div>
+          <div><span class="pf-stat__value">15+</span><span class="pf-stat__label" data-ka="პროექტი" data-en="Projects Built">პროექტი</span></div>
+          <div><span class="pf-stat__value">5+</span><span class="pf-stat__label" data-ka="QGIS პლაგინი" data-en="QGIS Plugins">QGIS პლაგინი</span></div>
+        </div>
+      </div>
+      <img class="pf-avatar" src="https://avatars.githubusercontent.com/u/36360197?v=4" alt="Giorgi Kapanadze" />
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ ABOUT ══════════════════════════════════ -->
+<section class="pf-section pf-section--alt" id="about">
+  <div class="pf-container">
+    <div class="pf-about__grid">
+      <div class="pf-about__text">
+        <span class="pf-section-tag" data-ka="შესახებ" data-en="About">შესახებ</span>
+        <h2 class="pf-section-title">
+          <span data-ka="სამყაროს კარტოგრაფია,<br>ერთი მონაცემი ჯერ." data-en="Mapping the world,<br>one dataset at a time.">სამყაროს კარტოგრაფია,<br>ერთი მონაცემი ჯერ.</span>
+        </h2>
+        <p data-ka="მე ვარ <strong>GIS და დისტანციური ზონდირების სპეციალისტი</strong> ჭიათურიდან, საქართველო. ღრმა გამოცდილება სივრცული ანალიზში, სივრცული მონაცემთა ინფრასტრუქტურასა და ღია კოდის GIS ინსტრუმენტებში."
+           data-en="I'm a <strong>GIS &amp; Remote Sensing specialist</strong> from Chiatura, Georgia with deep expertise in geospatial analysis, spatial data infrastructure, and open-source GIS tools.">
+          მე ვარ <strong>GIS და დისტანციური ზონდირების სპეციალისტი</strong> ჭიათურიდან, საქართველო. ღრმა გამოცდილება სივრცული ანალიზში, სივრცული მონაცემთა ინფრასტრუქტურასა და ღია კოდის GIS ინსტრუმენტებში.
+        </p>
+        <p data-ka="ვქმნი <strong>QGIS პლაგინებს</strong>, <strong>Python სივრცულ პაკეტებს</strong> და <strong>ინტერაქტიულ ვებ-რუქებს</strong> — რთული სივრცული მონაცემებიდან ვქმნი სასარგებლო ინფორმაციას."
+           data-en="I develop <strong>QGIS plugins</strong>, <strong>Python geospatial packages</strong>, and <strong>interactive web maps</strong> — turning complex spatial data into actionable insights.">
+          ვქმნი <strong>QGIS პლაგინებს</strong>, <strong>Python სივრცულ პაკეტებს</strong> და <strong>ინტერაქტიულ ვებ-რუქებს</strong> — რთული სივრცული მონაცემებიდან ვქმნი სასარგებლო ინფორმაციას.
+        </p>
+        <p data-ka="ჩემი სამუშაო მოიცავს ურბანულ 3D ქალაქის მოდელირებას (CityGML), სატელიტური სურათების ანალიზს, Cloud GIS ინფრასტრუქტურასა და GIS-ის სასწავლო პლატფორმებს."
+           data-en="My work spans urban 3D city modelling (CityGML), satellite image analysis, cloud GIS infrastructure, and educational GIS platforms.">
+          ჩემი სამუშაო მოიცავს ურბანულ 3D ქალაქის მოდელირებას (CityGML), სატელიტური სურათების ანალიზს, Cloud GIS ინფრასტრუქტურასა და GIS-ის სასწავლო პლატფორმებს.
+        </p>
+        <p data-ka="ვარ ღია კოდის სივრცული საზოგადოების აქტიური წევრი და ლექტორი <strong>BTU-ში (ბიზნეს-ტექნოლოგიური უნივერსიტეტი)</strong>."
+           data-en="Active contributor to the open-source geospatial community and instructor at <strong>BTU (Business and Technology University)</strong>.">
+          ვარ ღია კოდის სივრცული საზოგადოების აქტიური წევრი და ლექტორი <strong>BTU-ში (ბიზნეს-ტექნოლოგიური უნივერსიტეტი)</strong>.
+        </p>
+      </div>
+      <div>
+        <span class="pf-section-tag" data-ka="სად მიპოვით" data-en="Find me at">სად მიპოვით</span>
+        <div class="pf-links">
+          <a href="https://github.com/ezdanapak" target="_blank" rel="noopener" class="pf-link">
+            <span class="pf-link__icon">🐙</span><span class="pf-link__label">GitHub</span><span class="pf-link__url">ezdanapak</span>
+          </a>
+          <a href="https://kapanadze.medium.com/" target="_blank" rel="noopener" class="pf-link">
+            <span class="pf-link__icon">✍️</span><span class="pf-link__label">Medium</span><span class="pf-link__url">kapanadze.medium.com</span>
+          </a>
+          <a href="https://dev.to/kapanadze" target="_blank" rel="noopener" class="pf-link">
+            <span class="pf-link__icon">💻</span><span class="pf-link__label">Dev.to</span><span class="pf-link__url">dev.to/kapanadze</span>
+          </a>
+          <a href="https://sites.google.com/view/gisgeo/" target="_blank" rel="noopener" class="pf-link">
+            <span class="pf-link__icon">🌐</span>
+            <span class="pf-link__label" data-ka="ვებ-გვერდი" data-en="GIS Website">ვებ-გვერდი</span>
+            <span class="pf-link__url">gisgeo</span>
+          </a>
+          <a href="mailto:kapan.gio777@gmail.com" class="pf-link">
+            <span class="pf-link__icon">📧</span><span class="pf-link__label">Email</span><span class="pf-link__url">kapan.gio777@gmail.com</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ SKILLS ══════════════════════════════════ -->
+<section class="pf-section" id="skills">
+  <div class="pf-container">
+    <span class="pf-section-tag" data-ka="უნარები" data-en="Skills">უნარები</span>
+    <h2 class="pf-section-title" data-ka="ტექ სტეკი" data-en="Tech Stack">ტექ სტეკი</h2>
+    <p class="pf-section-desc" data-ka="ინსტრუმენტები და ტექნოლოგიები, რომლებსაც ვიყენებ სივრცული გადაწყვეტილებების შესაქმნელად." data-en="Tools and technologies I use to build geospatial solutions.">ინსტრუმენტები და ტექნოლოგიები, რომლებსაც ვიყენებ სივრცული გადაწყვეტილებების შესაქმნელად.</p>
+    <div class="pf-skills__grid">
+      <div class="pf-skill"><span class="pf-skill__icon">🗺️</span><span class="pf-skill__name">QGIS</span><span class="pf-skill__desc" data-ka="პლაგინების შემუშავება, ალგორითმები, მორგებული სამუშაო პროცესები" data-en="Plugin development, processing algorithms, custom workflows">პლაგინების შემუშავება, ალგორითმები, მორგებული სამუშაო პროცესები</span></div>
+      <div class="pf-skill"><span class="pf-skill__icon">🐍</span><span class="pf-skill__name">Python</span><span class="pf-skill__desc">GeoPandas, Shapely, Rasterio, PyQGIS, Fiona</span></div>
+      <div class="pf-skill"><span class="pf-skill__icon">🛰️</span><span class="pf-skill__name" data-ka="დისტანციური ზონდირება" data-en="Remote Sensing">დისტანციური ზონდირება</span><span class="pf-skill__desc" data-ka="სატელიტური სურათები, სპექტრული ინდექსები, ცვლილებათა გამოვლენა" data-en="Satellite imagery, spectral indices, change detection">სატელიტური სურათები, სპექტრული ინდექსები, ცვლილებათა გამოვლენა</span></div>
+      <div class="pf-skill"><span class="pf-skill__icon">🌍</span><span class="pf-skill__name" data-ka="ვებ-კარტოგრაფია" data-en="Web Mapping">ვებ-კარტოგრაფია</span><span class="pf-skill__desc">Leaflet, MapLibre, OpenLayers, Mapbox</span></div>
+      <div class="pf-skill"><span class="pf-skill__icon">🏙️</span><span class="pf-skill__name" data-ka="3D ქალაქის მოდელები" data-en="3D City Models">3D ქალაქის მოდელები</span><span class="pf-skill__desc" data-ka="CityGML, 3D City Database, LoD მოდელირება" data-en="CityGML, 3D City Database, LoD modelling">CityGML, 3D City Database, LoD მოდელირება</span></div>
+      <div class="pf-skill"><span class="pf-skill__icon">☁️</span><span class="pf-skill__name">Google Earth Engine</span><span class="pf-skill__desc" data-ka="Cloud სივრცული დამუშავება, მასშტაბური ანალიზი" data-en="Cloud geospatial processing, large-scale analysis">Cloud სივრცული დამუშავება, მასშტაბური ანალიზი</span></div>
+      <div class="pf-skill"><span class="pf-skill__icon">🗄️</span><span class="pf-skill__name" data-ka="სივრცული მონაცემთა ბაზები" data-en="Spatial Databases">სივრცული მონაცემთა ბაზები</span><span class="pf-skill__desc">PostGIS, PostgreSQL, GeoServer, GeoNetwork</span></div>
+      <div class="pf-skill"><span class="pf-skill__icon">🐳</span><span class="pf-skill__name">Docker &amp; DevOps</span><span class="pf-skill__desc" data-ka="კონტეინერიზებული GIS სერვისები, CI/CD" data-en="Containerised GIS services, CI/CD">კონტეინერიზებული GIS სერვისები, CI/CD</span></div>
+      <div class="pf-skill"><span class="pf-skill__icon">⚡</span><span class="pf-skill__name">JavaScript</span><span class="pf-skill__desc" data-ka="ინტერაქტიული რუქები, ვებ-აპლიკაციები, Node.js" data-en="Interactive maps, web apps, Node.js">ინტერაქტიული რუქები, ვებ-აპლიკაციები, Node.js</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════════════ PROJECTS ═════════════════════════════════ -->
+<section class="pf-section pf-section--alt" id="projects">
+  <div class="pf-container">
+    <span class="pf-section-tag" data-ka="პროექტები" data-en="Projects">პროექტები</span>
+    <h2 class="pf-section-title" data-ka="გამოჩენილი ნამუშევრები" data-en="Featured Work">გამოჩენილი ნამუშევრები</h2>
+    <p class="pf-section-desc" data-ka="ღია კოდის GIS ინსტრუმენტები, ვებ-რუქები და სივრცული აპლიკაციები." data-en="Open-source GIS tools, web maps, and geospatial applications.">ღია კოდის GIS ინსტრუმენტები, ვებ-რუქები და სივრცული აპლიკაციები.</p>
+    <div class="pf-projects__grid">
+
+      <a class="pf-card" href="https://github.com/ezdanapak/transliterator" target="_blank" rel="noopener">
+        <div class="pf-card__header"><span class="pf-card__name">Transliterator</span><span class="pf-card__arrow">↗</span></div>
+        <p class="pf-card__desc" data-ka="QGIS პლაგინი ქართულ-ინგლისური ტრანსლიტერაციისთვის. ამარტივებს მრავალენოვანი კარტოგრაფიის სამუშაო პროცესებს." data-en="QGIS plugin for Georgian–English transliteration of map labels. Simplifies multilingual cartography workflows.">QGIS პლაგინი ქართულ-ინგლისური ტრანსლიტერაციისთვის. ამარტივებს მრავალენოვანი კარტოგრაფიის სამუშაო პროცესებს.</p>
+        <div class="pf-card__tags"><span class="pf-tag">QGIS Plugin</span><span class="pf-tag">PyQGIS</span><span class="pf-tag">Georgian</span></div>
+        <div class="pf-card__footer">
+          <span class="pf-lang-dot"><span class="pf-dot dot-py"></span>Python</span>
+          <div class="pf-card__links"><a href="https://ezdanapak.github.io/transliterator/" class="pf-link-sm" onclick="event.stopPropagation()" target="_blank" rel="noopener" data-ka="დემო ↗" data-en="Demo ↗">დემო ↗</a></div>
+        </div>
+      </a>
+
+      <a class="pf-card" href="https://github.com/ezdanapak/3DCityDB-Tools-for-QGIS" target="_blank" rel="noopener">
+        <div class="pf-card__header"><span class="pf-card__name">3DCityDB Tools for QGIS</span><span class="pf-card__arrow">↗</span></div>
+        <p class="pf-card__desc" data-ka="QGIS პლაგინი CityGML 3D ქალაქის მონაცემთა ბაზის მართვისთვის. 3D ურბანული მოდელების იმპორტი, ექსპორტი და მართვა." data-en="QGIS plugin for CityGML 3D City Database. Enables import, export, and management of 3D urban models.">QGIS პლაგინი CityGML 3D ქალაქის მონაცემთა ბაზის მართვისთვის. 3D ურბანული მოდელების იმპორტი, ექსპორტი და მართვა.</p>
+        <div class="pf-card__tags"><span class="pf-tag">CityGML</span><span class="pf-tag">3D City</span><span class="pf-tag">QGIS Plugin</span></div>
+        <div class="pf-card__footer"><span class="pf-lang-dot"><span class="pf-dot dot-qgis"></span>QGIS</span></div>
+      </a>
+
+      <a class="pf-card" href="https://github.com/ezdanapak/mygeodev" target="_blank" rel="noopener">
+        <div class="pf-card__header"><span class="pf-card__name">mygeodev</span><span class="pf-card__arrow">↗</span></div>
+        <p class="pf-card__desc" data-ka="პირადი Python პაკეტი სივრცული ანალიზისა და კარტოგრაფიისთვის. ხელახლა გამოყენებადი ინსტრუმენტები GIS სამუშაო პროცესებისთვის." data-en="Personal Python package for geospatial analysis and mapping. Reusable tools for common GIS workflows.">პირადი Python პაკეტი სივრცული ანალიზისა და კარტოგრაფიისთვის. ხელახლა გამოყენებადი ინსტრუმენტები GIS სამუშაო პროცესებისთვის.</p>
+        <div class="pf-card__tags"><span class="pf-tag">geospatial</span><span class="pf-tag">map</span><span class="pf-tag">package</span></div>
+        <div class="pf-card__footer"><span class="pf-lang-dot"><span class="pf-dot dot-py"></span>Python</span></div>
+      </a>
+
+      <a class="pf-card" href="https://github.com/ezdanapak/SCE" target="_blank" rel="noopener">
+        <div class="pf-card__header"><span class="pf-card__name" data-ka="სამხრეთ კავკასიის ენერგეტიკის რუქა" data-en="South Caucasus Energy Map">სამხრეთ კავკასიის ენერგეტიკის რუქა</span><span class="pf-card__arrow">↗</span></div>
+        <p class="pf-card__desc" data-ka="სამხრეთ კავკასიის სადავო ენერგეტიკული პროექტების ინტერაქტიული რუქა — მწვანე ენერგია, მილსადენები, ინფრასტრუქტურა." data-en="Interactive map of controversial energy projects in the South Caucasus — green energy, pipelines, infrastructure.">სამხრეთ კავკასიის სადავო ენერგეტიკული პროექტების ინტერაქტიული რუქა — მწვანე ენერგია, მილსადენები, ინფრასტრუქტურა.</p>
+        <div class="pf-card__tags"><span class="pf-tag">caucasus</span><span class="pf-tag">energy</span><span class="pf-tag">map</span></div>
+        <div class="pf-card__footer"><span class="pf-lang-dot"><span class="pf-dot dot-js"></span>JavaScript</span></div>
+      </a>
+
+      <a class="pf-card" href="https://github.com/ezdanapak/BTU-GIS" target="_blank" rel="noopener">
+        <div class="pf-card__header"><span class="pf-card__name">BTU-GIS</span><span class="pf-card__arrow">↗</span></div>
+        <p class="pf-card__desc" data-ka="ბიზნეს-ტექნოლოგიური უნივერსიტეტის GIS კურსის პლატფორმა. სასწავლო მასალები, ლაბ-სავარჯიშოები და ინტერაქტიური GIS ამოცანები." data-en="GIS course platform for Business and Technology University. Educational materials, labs, and interactive GIS exercises.">ბიზნეს-ტექნოლოგიური უნივერსიტეტის GIS კურსის პლატფორმა. სასწავლო მასალები, ლაბ-სავარჯიშოები და ინტერაქტიური GIS ამოცანები.</p>
+        <div class="pf-card__tags"><span class="pf-tag">Education</span><span class="pf-tag">GIS Course</span></div>
+        <div class="pf-card__footer"><span class="pf-lang-dot"><span class="pf-dot dot-html"></span>HTML</span></div>
+      </a>
+
+      <a class="pf-card" href="https://github.com/ezdanapak/chiatura_city" target="_blank" rel="noopener">
+        <div class="pf-card__header"><span class="pf-card__name" data-ka="ჭიათურის ქალაქის რუქა" data-en="Chiatura City Map">ჭიათურის ქალაქის რუქა</span><span class="pf-card__arrow">↗</span></div>
+        <p class="pf-card__desc" data-ka="ჭიათურის ინტერაქტიული ვებ-რუქა — საბჭოთა ეპოქის საბაგიროებით ცნობილი ისტორიული სამთო ქალაქი საქართველოში." data-en="Interactive web map of Chiatura — a historic Georgian mining city known for its Soviet-era cable cars.">ჭიათურის ინტერაქტიული ვებ-რუქა — საბჭოთა ეპოქის საბაგიროებით ცნობილი ისტორიული სამთო ქალაქი საქართველოში.</p>
+        <div class="pf-card__tags"><span class="pf-tag">Web Map</span><span class="pf-tag">Chiatura</span></div>
+        <div class="pf-card__footer"><span class="pf-lang-dot"><span class="pf-dot dot-js"></span>JavaScript</span></div>
+      </a>
+
+      <a class="pf-card" href="https://github.com/ezdanapak/QGIS_GEORGIA" target="_blank" rel="noopener">
+        <div class="pf-card__header"><span class="pf-card__name">QGIS Georgia</span><span class="pf-card__arrow">↗</span></div>
+        <p class="pf-card__desc" data-ka="QGIS საქართველოს მომხმარებელთა ჯგუფის ოფიციალური ვებ-გვერდი. ღია კოდის GIS გამომყენებელ ქართველ სპეციალისტთა ჰაბი." data-en="Official website for the QGIS Georgia User Group. Community hub for Georgian open-source GIS professionals.">QGIS საქართველოს მომხმარებელთა ჯგუფის ოფიციალური ვებ-გვერდი. ღია კოდის GIS გამომყენებელ ქართველ სპეციალისტთა ჰაბი.</p>
+        <div class="pf-card__tags"><span class="pf-tag">QGIS Community</span><span class="pf-tag">Georgia</span></div>
+        <div class="pf-card__footer"><span class="pf-lang-dot"><span class="pf-dot dot-html"></span>HTML</span></div>
+      </a>
+
+      <a class="pf-card" href="https://github.com/ezdanapak/URL-Decoder" target="_blank" rel="noopener">
+        <div class="pf-card__header"><span class="pf-card__name">URL Decoder</span><span class="pf-card__arrow">↗</span></div>
+        <p class="pf-card__desc" data-ka="URL კოდირება/დეკოდირების მარტივი ვებ-აპლიკაცია. პროცენტ-კოდირებული სტრინგებისა და query პარამეტრებთან მუშაობა." data-en="Lightweight web app for URL encoding and decoding. Clean interface for percent-encoded strings and query parameters.">URL კოდირება/დეკოდირების მარტივი ვებ-აპლიკაცია. პროცენტ-კოდირებული სტრინგებისა და query პარამეტრებთან მუშაობა.</p>
+        <div class="pf-card__tags"><span class="pf-tag">encoding</span><span class="pf-tag">decoding</span><span class="pf-tag">url</span></div>
+        <div class="pf-card__footer">
+          <span class="pf-lang-dot"><span class="pf-dot dot-html"></span>HTML</span>
+          <div class="pf-card__links"><a href="https://url.kapanadze.dev/" class="pf-link-sm" onclick="event.stopPropagation()" target="_blank" rel="noopener" data-ka="Live ↗" data-en="Live ↗">Live ↗</a></div>
+        </div>
+      </a>
+
+      <a class="pf-card" href="https://github.com/ezdanapak/MyDevOps" target="_blank" rel="noopener">
+        <div class="pf-card__header"><span class="pf-card__name">MyDevOps</span><span class="pf-card__arrow">↗</span></div>
+        <p class="pf-card__desc" data-ka="DevOps-ის ყოვლისმომცველი დოკუმენტაცია — ინფრასტრუქტურა, CI/CD, კონტეინერიზაცია და Cloud deployment." data-en="Comprehensive DevOps documentation — infrastructure, CI/CD pipelines, containerisation, and cloud deployment.">DevOps-ის ყოვლისმომცველი დოკუმენტაცია — ინფრასტრუქტურა, CI/CD, კონტეინერიზაცია და Cloud deployment.</p>
+        <div class="pf-card__tags"><span class="pf-tag">dev</span><span class="pf-tag">ops</span><span class="pf-tag">documentation</span></div>
+        <div class="pf-card__footer">
+          <span class="pf-lang-dot"><span class="pf-dot dot-html"></span>HTML</span>
+          <div class="pf-card__links"><a href="https://ezdanapak.github.io/MyDevOps/" class="pf-link-sm" onclick="event.stopPropagation()" target="_blank" rel="noopener" data-ka="Docs ↗" data-en="Docs ↗">Docs ↗</a></div>
+        </div>
+      </a>
+
+      <a class="pf-card" href="https://github.com/ezdanapak/R-test" target="_blank" rel="noopener">
+        <div class="pf-card__header"><span class="pf-card__name" data-ka="იშიჰარას ფერთა ტესტი" data-en="Ishihara Colour Test">იშიჰარას ფერთა ტესტი</span><span class="pf-card__arrow">↗</span></div>
+        <p class="pf-card__desc" data-ka="ინტერაქტიული იშიჰარას ფერთა ხედვის ტესტი. სასარგებლოა კარტოგრაფებისთვის ხელმისაწვდომი ფერადი პალიტრების შემუშავებისას." data-en="Interactive Ishihara colour vision test. Useful for cartographers designing accessible colour palettes for maps.">ინტერაქტიული იშიჰარას ფერთა ხედვის ტესტი. სასარგებლოა კარტოგრაფებისთვის ხელმისაწვდომი ფერადი პალიტრების შემუშავებისას.</p>
+        <div class="pf-card__tags"><span class="pf-tag">Colour Vision</span><span class="pf-tag">Cartography</span></div>
+        <div class="pf-card__footer"><span class="pf-lang-dot"><span class="pf-dot dot-py"></span>Python</span></div>
+      </a>
+
+      <a class="pf-card" href="https://github.com/ezdanapak/wrm" target="_blank" rel="noopener">
+        <div class="pf-card__header"><span class="pf-card__name" data-ka="ზამთრის გზები" data-en="Winter Roads — ზამთრის გზები">ზამთრის გზები</span><span class="pf-card__arrow">↗</span></div>
+        <p class="pf-card__desc" data-ka="საქართველოს ზამთრის გზების მდგომარეობის ინტერაქტიული ვიზუალიზაცია — გზის ხელმისაწვდომობა ზამთარში." data-en="Interactive visualisation of winter road conditions in Georgia — road accessibility data for winter months.">საქართველოს ზამთრის გზების მდგომარეობის ინტერაქტიული ვიზუალიზაცია — გზის ხელმისაწვდომობა ზამთარში.</p>
+        <div class="pf-card__tags"><span class="pf-tag">Web Map</span><span class="pf-tag">Georgia</span></div>
+        <div class="pf-card__footer"><span class="pf-lang-dot"><span class="pf-dot dot-js"></span>JavaScript</span></div>
+      </a>
+
+      <a class="pf-card" href="https://github.com/ezdanapak/CounterNG" target="_blank" rel="noopener">
+        <div class="pf-card__header"><span class="pf-card__name">CounterNG</span><span class="pf-card__arrow">↗</span></div>
+        <p class="pf-card__desc" data-ka="სუფთა, მორგებადი უკუმთვლელი ტაიმერის ვებ-აპლიკაცია — დროის უკუღმა მთვლელი." data-en="A clean, customisable countdown timer web application — minimal design with precision timing.">სუფთა, მორგებადი უკუმთვლელი ტაიმერის ვებ-აპლიკაცია — დროის უკუღმა მთვლელი.</p>
+        <div class="pf-card__tags"><span class="pf-tag">Web App</span><span class="pf-tag">Timer</span></div>
+        <div class="pf-card__footer"><span class="pf-lang-dot"><span class="pf-dot dot-html"></span>HTML</span></div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════ CONTACT ══════════════════════════════════ -->
+<section class="pf-section" id="contact">
+  <div class="pf-container">
+    <span class="pf-section-tag" data-ka="კონტაქტი" data-en="Contact">კონტაქტი</span>
+    <h2 class="pf-section-title" data-ka="დაგვიკავშირდით" data-en="Get in Touch">დაგვიკავშირდით</h2>
+    <p class="pf-section-desc" data-ka="ღია ვარ GIS კონსულტაციებისთვის, თანამშრომლობისა და ღია კოდის პროექტებისთვის." data-en="Open to GIS consulting, collaboration, and open-source contributions.">ღია ვარ GIS კონსულტაციებისთვის, თანამშრომლობისა და ღია კოდის პროექტებისთვის.</p>
+    <div class="pf-contact__grid">
+      <a href="https://github.com/ezdanapak" target="_blank" rel="noopener" class="pf-contact-card"><span class="pf-contact-card__icon">🐙</span><span class="pf-contact-card__name">GitHub</span><span class="pf-contact-card__val">ezdanapak</span></a>
+      <a href="mailto:kapan.gio777@gmail.com" class="pf-contact-card"><span class="pf-contact-card__icon">📧</span><span class="pf-contact-card__name">Email</span><span class="pf-contact-card__val">kapan.gio777</span></a>
+      <a href="https://kapanadze.medium.com/" target="_blank" rel="noopener" class="pf-contact-card"><span class="pf-contact-card__icon">✍️</span><span class="pf-contact-card__name">Medium</span><span class="pf-contact-card__val">kapanadze</span></a>
+      <a href="https://dev.to/kapanadze" target="_blank" rel="noopener" class="pf-contact-card"><span class="pf-contact-card__icon">💻</span><span class="pf-contact-card__name">Dev.to</span><span class="pf-contact-card__val">kapanadze</span></a>
+      <a href="https://sites.google.com/view/gisgeo/" target="_blank" rel="noopener" class="pf-contact-card">
+        <span class="pf-contact-card__icon">🌐</span>
+        <span class="pf-contact-card__name" data-ka="ვებ-გვერდი" data-en="GIS Website">ვებ-გვერდი</span>
+        <span class="pf-contact-card__val">gisgeo</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</div><!-- end .pf-wrap -->
+
+<!-- Language toggle button -->
+<button class="pf-lang-btn" id="pfLang">EN</button>
+
+<script>
+(function () {
+  var lang = localStorage.getItem('pf_lang') || 'ka';
+
+  function apply(l) {
+    lang = l;
+    localStorage.setItem('pf_lang', l);
+    document.getElementById('pfLang').textContent = l === 'ka' ? 'EN' : 'KA';
+    document.querySelectorAll('[data-ka]').forEach(function (el) {
+      var val = el.getAttribute('data-' + l);
+      if (val === null) return;
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+        el.placeholder = val;
+      } else if (val.indexOf('<') !== -1) {
+        el.innerHTML = val;
+      } else {
+        el.textContent = val;
+      }
+    });
+  }
+
+  apply(lang);
+
+  document.getElementById('pfLang').addEventListener('click', function () {
+    apply(lang === 'ka' ? 'en' : 'ka');
+  });
+})();
+</script>
+
+{% endblock %}
+
+{% block content %}{% endblock %}

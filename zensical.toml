@@ -1,0 +1,72 @@
+[project]
+site_name    = "გიორგი კაპანაძე"
+site_description = "GIS & Remote Sensing სპეციალისტი ჭიათურიდან, საქართველო"
+site_author  = "Giorgi Kapanadze"
+site_url     = "https://giorgi.kapanadze.dev/"
+copyright    = "Copyright &copy; 2025 Giorgi Kapanadze · ჭიათური, საქართველო"
+repo_url     = "https://github.com/ezdanapak/ezdanapak.github.io"
+repo_name    = "GitHub"
+
+extra_css = ["stylesheets/extra.css"]
+
+[project.theme]
+custom_dir = "overrides"
+language   = "ka"
+features   = [
+  "navigation.instant",
+  "navigation.instant.prefetch",
+  "navigation.top",
+  "navigation.tracking",
+  "navigation.footer",
+  "header.autohide",
+  "search.highlight",
+  "content.code.copy",
+  "announce.dismiss",
+]
+
+[project.theme.font]
+text = "Inter"
+code = "JetBrains Mono"
+
+[project.theme.icon]
+logo = "lucide/map-pin"
+repo = "fontawesome/brands/github"
+
+[[project.theme.palette]]
+scheme       = "default"
+primary      = "custom"
+accent       = "custom"
+toggle.icon  = "lucide/moon"
+toggle.name  = "მუქი თემაზე გადასვლა"
+
+[[project.theme.palette]]
+scheme       = "slate"
+primary      = "custom"
+accent       = "custom"
+toggle.icon  = "lucide/sun"
+toggle.name  = "ნათელ თემაზე გადასვლა"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/ezdanapak"
+name = "GitHub"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/medium"
+link = "https://kapanadze.medium.com/"
+name = "Medium"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/dev"
+link = "https://dev.to/kapanadze"
+name = "Dev.to"
+
+[[project.extra.social]]
+icon = "lucide/globe"
+link = "https://sites.google.com/view/gisgeo/"
+name = "GIS Website"
+
+[[project.extra.social]]
+icon = "lucide/mail"
+link = "mailto:kapan.gio777@gmail.com"
+name = "Email"
