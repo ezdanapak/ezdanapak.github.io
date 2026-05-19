@@ -1,0 +1,680 @@
+
+<!doctype html>
+<html lang="ka" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="GIS & Remote Sensing სპეციალისტი ჭიათურიდან, საქართველო">
+      
+      
+        <meta name="author" content="Giorgi Kapanadze">
+      
+      
+        <link rel="canonical" href="https://giorgi.kapanadze.dev/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="./assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.43">
+    
+    
+      
+        <title>გიორგი კაპანაძე — GIS & Remote Sensing - გიორგი კაპანაძე</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="./assets/stylesheets/modern/main.fba56155.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="./assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="./stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="ნავიგაცია"></label>
+    <div data-md-component="skip">
+      
+        <a href="#__skip" class="md-skip">
+          კონტენტზე გადასვლა
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="" title="გიორგი კაპანაძე" class="md-header__button md-logo" aria-label="გიორგი კაპანაძე" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-map-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="ნავიგაცია">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            გიორგი კაპანაძე
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              გიორგი კაპანაძე — GIS & Remote Sensing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="მუქი თემაზე გადასვლა"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="მუქი თემაზე გადასვლა" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="ნათელ თემაზე გადასვლა"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="ნათელ თემაზე გადასვლა" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/ezdanapak/ezdanapak.github.io" title="საცავში გადასვლა" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+
+<div class="pf-wrap">
+
+<!-- ═══════════════════════════════════ HERO ═══════════════════════════════════ -->
+<section class="pf-section pf-hero" id="home">
+  <div class="pf-container">
+    <div class="pf-hero__grid">
+      <div>
+        <span class="pf-badge">
+          <span data-ka="თანამშრომლობისთვის ღია" data-en="Available for collaboration">თანამშრომლობისთვის ღია</span>
+        </span>
+        <h1 class="pf-hero__name">
+          <span data-ka="გიორგი" data-en="Giorgi">გიორგი</span><br>
+          <span class="pf-accent">კაპანაძე</span>
+        </h1>
+        <p class="pf-hero__subtitle">
+          <span data-ka="GIS &amp; დისტანციური ზონდირების სპეციალისტი" data-en="GIS &amp; Remote Sensing Specialist">GIS &amp; დისტანციური ზონდირების სპეციალისტი</span>
+        </p>
+        <p class="pf-hero__location">
+          📍 <span data-ka="ჭიათური, საქართველო" data-en="Chiatura, Georgia">ჭიათური, საქართველო</span>
+        </p>
+        <div class="pf-hero__actions">
+          <a href="#projects" class="pf-btn pf-btn--primary">
+            <span data-ka="პროექტები →" data-en="View Projects →">პროექტები →</span>
+          </a>
+          <a href="https://github.com/ezdanapak" class="pf-btn pf-btn--outline" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://sites.google.com/view/gisgeo/" class="pf-btn pf-btn--outline" target="_blank" rel="noopener">
+            <span data-ka="ვებ-გვერდი ↗" data-en="Website ↗">ვებ-გვერდი ↗</span>
+          </a>
+        </div>
+        <div class="pf-stats">
+          <div><span class="pf-stat__value">10+</span><span class="pf-stat__label" data-ka="წელი GIS-ში" data-en="Years in GIS">წელი GIS-ში</span></div>
+          <div><span class="pf-stat__value">15+</span><span class="pf-stat__label" data-ka="პროექტი" data-en="Projects Built">პროექტი</span></div>
+          <div><span class="pf-stat__value">5+</span><span class="pf-stat__label" data-ka="QGIS პლაგინი" data-en="QGIS Plugins">QGIS პლაგინი</span></div>
+        </div>
+      </div>
+      <img class="pf-avatar" src="https://avatars.githubusercontent.com/u/36360197?v=4" alt="Giorgi Kapanadze" />
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ ABOUT ══════════════════════════════════ -->
+<section class="pf-section pf-section--alt" id="about">
+  <div class="pf-container">
+    <div class="pf-about__grid">
+      <div class="pf-about__text">
+        <span class="pf-section-tag" data-ka="შესახებ" data-en="About">შესახებ</span>
+        <h2 class="pf-section-title">
+          <span data-ka="სამყაროს კარტოგრაფია,<br>ერთი მონაცემი ჯერ." data-en="Mapping the world,<br>one dataset at a time.">სამყაროს კარტოგრაფია,<br>ერთი მონაცემი ჯერ.</span>
+        </h2>
+        <p data-ka="მე ვარ <strong>GIS და დისტანციური ზონდირების სპეციალისტი</strong> ჭიათურიდან, საქართველო. ღრმა გამოცდილება სივრცული ანალიზში, სივრცული მონაცემთა ინფრასტრუქტურასა და ღია კოდის GIS ინსტრუმენტებში."
+           data-en="I'm a <strong>GIS &amp; Remote Sensing specialist</strong> from Chiatura, Georgia with deep expertise in geospatial analysis, spatial data infrastructure, and open-source GIS tools.">
+          მე ვარ <strong>GIS და დისტანციური ზონდირების სპეციალისტი</strong> ჭიათურიდან, საქართველო. ღრმა გამოცდილება სივრცული ანალიზში, სივრცული მონაცემთა ინფრასტრუქტურასა და ღია კოდის GIS ინსტრუმენტებში.
+        </p>
+        <p data-ka="ვქმნი <strong>QGIS პლაგინებს</strong>, <strong>Python სივრცულ პაკეტებს</strong> და <strong>ინტერაქტიულ ვებ-რუქებს</strong> — რთული სივრცული მონაცემებიდან ვქმნი სასარგებლო ინფორმაციას."
+           data-en="I develop <strong>QGIS plugins</strong>, <strong>Python geospatial packages</strong>, and <strong>interactive web maps</strong> — turning complex spatial data into actionable insights.">
+          ვქმნი <strong>QGIS პლაგინებს</strong>, <strong>Python სივრცულ პაკეტებს</strong> და <strong>ინტერაქტიულ ვებ-რუქებს</strong> — რთული სივრცული მონაცემებიდან ვქმნი სასარგებლო ინფორმაციას.
+        </p>
+        <p data-ka="ჩემი სამუშაო მოიცავს ურბანულ 3D ქალაქის მოდელირებას (CityGML), სატელიტური სურათების ანალიზს, Cloud GIS ინფრასტრუქტურასა და GIS-ის სასწავლო პლატფორმებს."
+           data-en="My work spans urban 3D city modelling (CityGML), satellite image analysis, cloud GIS infrastructure, and educational GIS platforms.">
+          ჩემი სამუშაო მოიცავს ურბანულ 3D ქალაქის მოდელირებას (CityGML), სატელიტური სურათების ანალიზს, Cloud GIS ინფრასტრუქტურასა და GIS-ის სასწავლო პლატფორმებს.
+        </p>
+        <p data-ka="ვარ ღია კოდის სივრცული საზოგადოების აქტიური წევრი და ლექტორი <strong>BTU-ში (ბიზნეს-ტექნოლოგიური უნივერსიტეტი)</strong>."
+           data-en="Active contributor to the open-source geospatial community and instructor at <strong>BTU (Business and Technology University)</strong>.">
+          ვარ ღია კოდის სივრცული საზოგადოების აქტიური წევრი და ლექტორი <strong>BTU-ში (ბიზნეს-ტექნოლოგიური უნივერსიტეტი)</strong>.
+        </p>
+      </div>
+      <div>
+        <span class="pf-section-tag" data-ka="სად მიპოვით" data-en="Find me at">სად მიპოვით</span>
+        <div class="pf-links">
+          <a href="https://github.com/ezdanapak" target="_blank" rel="noopener" class="pf-link">
+            <span class="pf-link__icon">🐙</span><span class="pf-link__label">GitHub</span><span class="pf-link__url">ezdanapak</span>
+          </a>
+          <a href="https://kapanadze.medium.com/" target="_blank" rel="noopener" class="pf-link">
+            <span class="pf-link__icon">✍️</span><span class="pf-link__label">Medium</span><span class="pf-link__url">kapanadze.medium.com</span>
+          </a>
+          <a href="https://dev.to/kapanadze" target="_blank" rel="noopener" class="pf-link">
+            <span class="pf-link__icon">💻</span><span class="pf-link__label">Dev.to</span><span class="pf-link__url">dev.to/kapanadze</span>
+          </a>
+          <a href="https://sites.google.com/view/gisgeo/" target="_blank" rel="noopener" class="pf-link">
+            <span class="pf-link__icon">🌐</span>
+            <span class="pf-link__label" data-ka="ვებ-გვერდი" data-en="GIS Website">ვებ-გვერდი</span>
+            <span class="pf-link__url">gisgeo</span>
+          </a>
+          <a href="mailto:kapan.gio777@gmail.com" class="pf-link">
+            <span class="pf-link__icon">📧</span><span class="pf-link__label">Email</span><span class="pf-link__url">kapan.gio777@gmail.com</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ SKILLS ══════════════════════════════════ -->
+<section class="pf-section" id="skills">
+  <div class="pf-container">
+    <span class="pf-section-tag" data-ka="უნარები" data-en="Skills">უნარები</span>
+    <h2 class="pf-section-title" data-ka="ტექ სტეკი" data-en="Tech Stack">ტექ სტეკი</h2>
+    <p class="pf-section-desc" data-ka="ინსტრუმენტები და ტექნოლოგიები, რომლებსაც ვიყენებ სივრცული გადაწყვეტილებების შესაქმნელად." data-en="Tools and technologies I use to build geospatial solutions.">ინსტრუმენტები და ტექნოლოგიები, რომლებსაც ვიყენებ სივრცული გადაწყვეტილებების შესაქმნელად.</p>
+    <div class="pf-skills__grid">
+      <div class="pf-skill"><span class="pf-skill__icon">🗺️</span><span class="pf-skill__name">QGIS</span><span class="pf-skill__desc" data-ka="პლაგინების შემუშავება, ალგორითმები, მორგებული სამუშაო პროცესები" data-en="Plugin development, processing algorithms, custom workflows">პლაგინების შემუშავება, ალგორითმები, მორგებული სამუშაო პროცესები</span></div>
+      <div class="pf-skill"><span class="pf-skill__icon">🐍</span><span class="pf-skill__name">Python</span><span class="pf-skill__desc">GeoPandas, Shapely, Rasterio, PyQGIS, Fiona</span></div>
+      <div class="pf-skill"><span class="pf-skill__icon">🛰️</span><span class="pf-skill__name" data-ka="დისტანციური ზონდირება" data-en="Remote Sensing">დისტანციური ზონდირება</span><span class="pf-skill__desc" data-ka="სატელიტური სურათები, სპექტრული ინდექსები, ცვლილებათა გამოვლენა" data-en="Satellite imagery, spectral indices, change detection">სატელიტური სურათები, სპექტრული ინდექსები, ცვლილებათა გამოვლენა</span></div>
+      <div class="pf-skill"><span class="pf-skill__icon">🌍</span><span class="pf-skill__name" data-ka="ვებ-კარტოგრაფია" data-en="Web Mapping">ვებ-კარტოგრაფია</span><span class="pf-skill__desc">Leaflet, MapLibre, OpenLayers, Mapbox</span></div>
+      <div class="pf-skill"><span class="pf-skill__icon">🏙️</span><span class="pf-skill__name" data-ka="3D ქალაქის მოდელები" data-en="3D City Models">3D ქალაქის მოდელები</span><span class="pf-skill__desc" data-ka="CityGML, 3D City Database, LoD მოდელირება" data-en="CityGML, 3D City Database, LoD modelling">CityGML, 3D City Database, LoD მოდელირება</span></div>
+      <div class="pf-skill"><span class="pf-skill__icon">☁️</span><span class="pf-skill__name">Google Earth Engine</span><span class="pf-skill__desc" data-ka="Cloud სივრცული დამუშავება, მასშტაბური ანალიზი" data-en="Cloud geospatial processing, large-scale analysis">Cloud სივრცული დამუშავება, მასშტაბური ანალიზი</span></div>
+      <div class="pf-skill"><span class="pf-skill__icon">🗄️</span><span class="pf-skill__name" data-ka="სივრცული მონაცემთა ბაზები" data-en="Spatial Databases">სივრცული მონაცემთა ბაზები</span><span class="pf-skill__desc">PostGIS, PostgreSQL, GeoServer, GeoNetwork</span></div>
+      <div class="pf-skill"><span class="pf-skill__icon">🐳</span><span class="pf-skill__name">Docker &amp; DevOps</span><span class="pf-skill__desc" data-ka="კონტეინერიზებული GIS სერვისები, CI/CD" data-en="Containerised GIS services, CI/CD">კონტეინერიზებული GIS სერვისები, CI/CD</span></div>
+      <div class="pf-skill"><span class="pf-skill__icon">⚡</span><span class="pf-skill__name">JavaScript</span><span class="pf-skill__desc" data-ka="ინტერაქტიული რუქები, ვებ-აპლიკაციები, Node.js" data-en="Interactive maps, web apps, Node.js">ინტერაქტიული რუქები, ვებ-აპლიკაციები, Node.js</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════════════ PROJECTS ═════════════════════════════════ -->
+<section class="pf-section pf-section--alt" id="projects">
+  <div class="pf-container">
+    <span class="pf-section-tag" data-ka="პროექტები" data-en="Projects">პროექტები</span>
+    <h2 class="pf-section-title" data-ka="გამოჩენილი ნამუშევრები" data-en="Featured Work">გამოჩენილი ნამუშევრები</h2>
+    <p class="pf-section-desc" data-ka="ღია კოდის GIS ინსტრუმენტები, ვებ-რუქები და სივრცული აპლიკაციები." data-en="Open-source GIS tools, web maps, and geospatial applications.">ღია კოდის GIS ინსტრუმენტები, ვებ-რუქები და სივრცული აპლიკაციები.</p>
+    <div class="pf-projects__grid">
+
+      <a class="pf-card" href="https://github.com/ezdanapak/transliterator" target="_blank" rel="noopener">
+        <div class="pf-card__header"><span class="pf-card__name">Transliterator</span><span class="pf-card__arrow">↗</span></div>
+        <p class="pf-card__desc" data-ka="QGIS პლაგინი ქართულ-ინგლისური ტრანსლიტერაციისთვის. ამარტივებს მრავალენოვანი კარტოგრაფიის სამუშაო პროცესებს." data-en="QGIS plugin for Georgian–English transliteration of map labels. Simplifies multilingual cartography workflows.">QGIS პლაგინი ქართულ-ინგლისური ტრანსლიტერაციისთვის. ამარტივებს მრავალენოვანი კარტოგრაფიის სამუშაო პროცესებს.</p>
+        <div class="pf-card__tags"><span class="pf-tag">QGIS Plugin</span><span class="pf-tag">PyQGIS</span><span class="pf-tag">Georgian</span></div>
+        <div class="pf-card__footer">
+          <span class="pf-lang-dot"><span class="pf-dot dot-py"></span>Python</span>
+          <div class="pf-card__links"><a href="https://ezdanapak.github.io/transliterator/" class="pf-link-sm" onclick="event.stopPropagation()" target="_blank" rel="noopener" data-ka="დემო ↗" data-en="Demo ↗">დემო ↗</a></div>
+        </div>
+      </a>
+
+      <a class="pf-card" href="https://github.com/ezdanapak/3DCityDB-Tools-for-QGIS" target="_blank" rel="noopener">
+        <div class="pf-card__header"><span class="pf-card__name">3DCityDB Tools for QGIS</span><span class="pf-card__arrow">↗</span></div>
+        <p class="pf-card__desc" data-ka="QGIS პლაგინი CityGML 3D ქალაქის მონაცემთა ბაზის მართვისთვის. 3D ურბანული მოდელების იმპორტი, ექსპორტი და მართვა." data-en="QGIS plugin for CityGML 3D City Database. Enables import, export, and management of 3D urban models.">QGIS პლაგინი CityGML 3D ქალაქის მონაცემთა ბაზის მართვისთვის. 3D ურბანული მოდელების იმპორტი, ექსპორტი და მართვა.</p>
+        <div class="pf-card__tags"><span class="pf-tag">CityGML</span><span class="pf-tag">3D City</span><span class="pf-tag">QGIS Plugin</span></div>
+        <div class="pf-card__footer"><span class="pf-lang-dot"><span class="pf-dot dot-qgis"></span>QGIS</span></div>
+      </a>
+
+      <a class="pf-card" href="https://github.com/ezdanapak/mygeodev" target="_blank" rel="noopener">
+        <div class="pf-card__header"><span class="pf-card__name">mygeodev</span><span class="pf-card__arrow">↗</span></div>
+        <p class="pf-card__desc" data-ka="პირადი Python პაკეტი სივრცული ანალიზისა და კარტოგრაფიისთვის. ხელახლა გამოყენებადი ინსტრუმენტები GIS სამუშაო პროცესებისთვის." data-en="Personal Python package for geospatial analysis and mapping. Reusable tools for common GIS workflows.">პირადი Python პაკეტი სივრცული ანალიზისა და კარტოგრაფიისთვის. ხელახლა გამოყენებადი ინსტრუმენტები GIS სამუშაო პროცესებისთვის.</p>
+        <div class="pf-card__tags"><span class="pf-tag">geospatial</span><span class="pf-tag">map</span><span class="pf-tag">package</span></div>
+        <div class="pf-card__footer"><span class="pf-lang-dot"><span class="pf-dot dot-py"></span>Python</span></div>
+      </a>
+
+      <a class="pf-card" href="https://github.com/ezdanapak/SCE" target="_blank" rel="noopener">
+        <div class="pf-card__header"><span class="pf-card__name" data-ka="სამხრეთ კავკასიის ენერგეტიკის რუქა" data-en="South Caucasus Energy Map">სამხრეთ კავკასიის ენერგეტიკის რუქა</span><span class="pf-card__arrow">↗</span></div>
+        <p class="pf-card__desc" data-ka="სამხრეთ კავკასიის სადავო ენერგეტიკული პროექტების ინტერაქტიული რუქა — მწვანე ენერგია, მილსადენები, ინფრასტრუქტურა." data-en="Interactive map of controversial energy projects in the South Caucasus — green energy, pipelines, infrastructure.">სამხრეთ კავკასიის სადავო ენერგეტიკული პროექტების ინტერაქტიული რუქა — მწვანე ენერგია, მილსადენები, ინფრასტრუქტურა.</p>
+        <div class="pf-card__tags"><span class="pf-tag">caucasus</span><span class="pf-tag">energy</span><span class="pf-tag">map</span></div>
+        <div class="pf-card__footer"><span class="pf-lang-dot"><span class="pf-dot dot-js"></span>JavaScript</span></div>
+      </a>
+
+      <a class="pf-card" href="https://github.com/ezdanapak/BTU-GIS" target="_blank" rel="noopener">
+        <div class="pf-card__header"><span class="pf-card__name">BTU-GIS</span><span class="pf-card__arrow">↗</span></div>
+        <p class="pf-card__desc" data-ka="ბიზნეს-ტექნოლოგიური უნივერსიტეტის GIS კურსის პლატფორმა. სასწავლო მასალები, ლაბ-სავარჯიშოები და ინტერაქტიური GIS ამოცანები." data-en="GIS course platform for Business and Technology University. Educational materials, labs, and interactive GIS exercises.">ბიზნეს-ტექნოლოგიური უნივერსიტეტის GIS კურსის პლატფორმა. სასწავლო მასალები, ლაბ-სავარჯიშოები და ინტერაქტიური GIS ამოცანები.</p>
+        <div class="pf-card__tags"><span class="pf-tag">Education</span><span class="pf-tag">GIS Course</span></div>
+        <div class="pf-card__footer"><span class="pf-lang-dot"><span class="pf-dot dot-html"></span>HTML</span></div>
+      </a>
+
+      <a class="pf-card" href="https://github.com/ezdanapak/chiatura_city" target="_blank" rel="noopener">
+        <div class="pf-card__header"><span class="pf-card__name" data-ka="ჭიათურის ქალაქის რუქა" data-en="Chiatura City Map">ჭიათურის ქალაქის რუქა</span><span class="pf-card__arrow">↗</span></div>
+        <p class="pf-card__desc" data-ka="ჭიათურის ინტერაქტიული ვებ-რუქა — საბჭოთა ეპოქის საბაგიროებით ცნობილი ისტორიული სამთო ქალაქი საქართველოში." data-en="Interactive web map of Chiatura — a historic Georgian mining city known for its Soviet-era cable cars.">ჭიათურის ინტერაქტიული ვებ-რუქა — საბჭოთა ეპოქის საბაგიროებით ცნობილი ისტორიული სამთო ქალაქი საქართველოში.</p>
+        <div class="pf-card__tags"><span class="pf-tag">Web Map</span><span class="pf-tag">Chiatura</span></div>
+        <div class="pf-card__footer"><span class="pf-lang-dot"><span class="pf-dot dot-js"></span>JavaScript</span></div>
+      </a>
+
+      <a class="pf-card" href="https://github.com/ezdanapak/QGIS_GEORGIA" target="_blank" rel="noopener">
+        <div class="pf-card__header"><span class="pf-card__name">QGIS Georgia</span><span class="pf-card__arrow">↗</span></div>
+        <p class="pf-card__desc" data-ka="QGIS საქართველოს მომხმარებელთა ჯგუფის ოფიციალური ვებ-გვერდი. ღია კოდის GIS გამომყენებელ ქართველ სპეციალისტთა ჰაბი." data-en="Official website for the QGIS Georgia User Group. Community hub for Georgian open-source GIS professionals.">QGIS საქართველოს მომხმარებელთა ჯგუფის ოფიციალური ვებ-გვერდი. ღია კოდის GIS გამომყენებელ ქართველ სპეციალისტთა ჰაბი.</p>
+        <div class="pf-card__tags"><span class="pf-tag">QGIS Community</span><span class="pf-tag">Georgia</span></div>
+        <div class="pf-card__footer"><span class="pf-lang-dot"><span class="pf-dot dot-html"></span>HTML</span></div>
+      </a>
+
+      <a class="pf-card" href="https://github.com/ezdanapak/URL-Decoder" target="_blank" rel="noopener">
+        <div class="pf-card__header"><span class="pf-card__name">URL Decoder</span><span class="pf-card__arrow">↗</span></div>
+        <p class="pf-card__desc" data-ka="URL კოდირება/დეკოდირების მარტივი ვებ-აპლიკაცია. პროცენტ-კოდირებული სტრინგებისა და query პარამეტრებთან მუშაობა." data-en="Lightweight web app for URL encoding and decoding. Clean interface for percent-encoded strings and query parameters.">URL კოდირება/დეკოდირების მარტივი ვებ-აპლიკაცია. პროცენტ-კოდირებული სტრინგებისა და query პარამეტრებთან მუშაობა.</p>
+        <div class="pf-card__tags"><span class="pf-tag">encoding</span><span class="pf-tag">decoding</span><span class="pf-tag">url</span></div>
+        <div class="pf-card__footer">
+          <span class="pf-lang-dot"><span class="pf-dot dot-html"></span>HTML</span>
+          <div class="pf-card__links"><a href="https://url.kapanadze.dev/" class="pf-link-sm" onclick="event.stopPropagation()" target="_blank" rel="noopener" data-ka="Live ↗" data-en="Live ↗">Live ↗</a></div>
+        </div>
+      </a>
+
+      <a class="pf-card" href="https://github.com/ezdanapak/MyDevOps" target="_blank" rel="noopener">
+        <div class="pf-card__header"><span class="pf-card__name">MyDevOps</span><span class="pf-card__arrow">↗</span></div>
+        <p class="pf-card__desc" data-ka="DevOps-ის ყოვლისმომცველი დოკუმენტაცია — ინფრასტრუქტურა, CI/CD, კონტეინერიზაცია და Cloud deployment." data-en="Comprehensive DevOps documentation — infrastructure, CI/CD pipelines, containerisation, and cloud deployment.">DevOps-ის ყოვლისმომცველი დოკუმენტაცია — ინფრასტრუქტურა, CI/CD, კონტეინერიზაცია და Cloud deployment.</p>
+        <div class="pf-card__tags"><span class="pf-tag">dev</span><span class="pf-tag">ops</span><span class="pf-tag">documentation</span></div>
+        <div class="pf-card__footer">
+          <span class="pf-lang-dot"><span class="pf-dot dot-html"></span>HTML</span>
+          <div class="pf-card__links"><a href="https://ezdanapak.github.io/MyDevOps/" class="pf-link-sm" onclick="event.stopPropagation()" target="_blank" rel="noopener" data-ka="Docs ↗" data-en="Docs ↗">Docs ↗</a></div>
+        </div>
+      </a>
+
+      <a class="pf-card" href="https://github.com/ezdanapak/R-test" target="_blank" rel="noopener">
+        <div class="pf-card__header"><span class="pf-card__name" data-ka="იშიჰარას ფერთა ტესტი" data-en="Ishihara Colour Test">იშიჰარას ფერთა ტესტი</span><span class="pf-card__arrow">↗</span></div>
+        <p class="pf-card__desc" data-ka="ინტერაქტიული იშიჰარას ფერთა ხედვის ტესტი. სასარგებლოა კარტოგრაფებისთვის ხელმისაწვდომი ფერადი პალიტრების შემუშავებისას." data-en="Interactive Ishihara colour vision test. Useful for cartographers designing accessible colour palettes for maps.">ინტერაქტიული იშიჰარას ფერთა ხედვის ტესტი. სასარგებლოა კარტოგრაფებისთვის ხელმისაწვდომი ფერადი პალიტრების შემუშავებისას.</p>
+        <div class="pf-card__tags"><span class="pf-tag">Colour Vision</span><span class="pf-tag">Cartography</span></div>
+        <div class="pf-card__footer"><span class="pf-lang-dot"><span class="pf-dot dot-py"></span>Python</span></div>
+      </a>
+
+      <a class="pf-card" href="https://github.com/ezdanapak/wrm" target="_blank" rel="noopener">
+        <div class="pf-card__header"><span class="pf-card__name" data-ka="ზამთრის გზები" data-en="Winter Roads — ზამთრის გზები">ზამთრის გზები</span><span class="pf-card__arrow">↗</span></div>
+        <p class="pf-card__desc" data-ka="საქართველოს ზამთრის გზების მდგომარეობის ინტერაქტიული ვიზუალიზაცია — გზის ხელმისაწვდომობა ზამთარში." data-en="Interactive visualisation of winter road conditions in Georgia — road accessibility data for winter months.">საქართველოს ზამთრის გზების მდგომარეობის ინტერაქტიული ვიზუალიზაცია — გზის ხელმისაწვდომობა ზამთარში.</p>
+        <div class="pf-card__tags"><span class="pf-tag">Web Map</span><span class="pf-tag">Georgia</span></div>
+        <div class="pf-card__footer"><span class="pf-lang-dot"><span class="pf-dot dot-js"></span>JavaScript</span></div>
+      </a>
+
+      <a class="pf-card" href="https://github.com/ezdanapak/CounterNG" target="_blank" rel="noopener">
+        <div class="pf-card__header"><span class="pf-card__name">CounterNG</span><span class="pf-card__arrow">↗</span></div>
+        <p class="pf-card__desc" data-ka="სუფთა, მორგებადი უკუმთვლელი ტაიმერის ვებ-აპლიკაცია — დროის უკუღმა მთვლელი." data-en="A clean, customisable countdown timer web application — minimal design with precision timing.">სუფთა, მორგებადი უკუმთვლელი ტაიმერის ვებ-აპლიკაცია — დროის უკუღმა მთვლელი.</p>
+        <div class="pf-card__tags"><span class="pf-tag">Web App</span><span class="pf-tag">Timer</span></div>
+        <div class="pf-card__footer"><span class="pf-lang-dot"><span class="pf-dot dot-html"></span>HTML</span></div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════ CONTACT ══════════════════════════════════ -->
+<section class="pf-section" id="contact">
+  <div class="pf-container">
+    <span class="pf-section-tag" data-ka="კონტაქტი" data-en="Contact">კონტაქტი</span>
+    <h2 class="pf-section-title" data-ka="დაგვიკავშირდით" data-en="Get in Touch">დაგვიკავშირდით</h2>
+    <p class="pf-section-desc" data-ka="ღია ვარ GIS კონსულტაციებისთვის, თანამშრომლობისა და ღია კოდის პროექტებისთვის." data-en="Open to GIS consulting, collaboration, and open-source contributions.">ღია ვარ GIS კონსულტაციებისთვის, თანამშრომლობისა და ღია კოდის პროექტებისთვის.</p>
+    <div class="pf-contact__grid">
+      <a href="https://github.com/ezdanapak" target="_blank" rel="noopener" class="pf-contact-card"><span class="pf-contact-card__icon">🐙</span><span class="pf-contact-card__name">GitHub</span><span class="pf-contact-card__val">ezdanapak</span></a>
+      <a href="mailto:kapan.gio777@gmail.com" class="pf-contact-card"><span class="pf-contact-card__icon">📧</span><span class="pf-contact-card__name">Email</span><span class="pf-contact-card__val">kapan.gio777</span></a>
+      <a href="https://kapanadze.medium.com/" target="_blank" rel="noopener" class="pf-contact-card"><span class="pf-contact-card__icon">✍️</span><span class="pf-contact-card__name">Medium</span><span class="pf-contact-card__val">kapanadze</span></a>
+      <a href="https://dev.to/kapanadze" target="_blank" rel="noopener" class="pf-contact-card"><span class="pf-contact-card__icon">💻</span><span class="pf-contact-card__name">Dev.to</span><span class="pf-contact-card__val">kapanadze</span></a>
+      <a href="https://sites.google.com/view/gisgeo/" target="_blank" rel="noopener" class="pf-contact-card">
+        <span class="pf-contact-card__icon">🌐</span>
+        <span class="pf-contact-card__name" data-ka="ვებ-გვერდი" data-en="GIS Website">ვებ-გვერდი</span>
+        <span class="pf-contact-card__val">gisgeo</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</div><!-- end .pf-wrap -->
+
+<!-- Language toggle button -->
+<button class="pf-lang-btn" id="pfLang">EN</button>
+
+<script>
+(function () {
+  var lang = localStorage.getItem('pf_lang') || 'ka';
+
+  function apply(l) {
+    lang = l;
+    localStorage.setItem('pf_lang', l);
+    document.getElementById('pfLang').textContent = l === 'ka' ? 'EN' : 'KA';
+    document.querySelectorAll('[data-ka]').forEach(function (el) {
+      var val = el.getAttribute('data-' + l);
+      if (val === null) return;
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+        el.placeholder = val;
+      } else if (val.indexOf('<') !== -1) {
+        el.innerHTML = val;
+      } else {
+        el.textContent = val;
+      }
+    });
+  }
+
+  apply(lang);
+
+  document.getElementById('pfLang').addEventListener('click', function () {
+    apply(lang === 'ka' ? 'en' : 'ka');
+  });
+})();
+</script>
+
+
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ნავიგაცია" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="" title="გიორგი კაპანაძე" class="md-nav__button md-logo" aria-label="გიორგი კაპანაძე" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-map-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+
+    </a>
+    გიორგი კაპანაძე
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ezdanapak/ezdanapak.github.io" title="საცავში გადასვლა" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+      
+      <a href="" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  გიორგი კაპანაძე — GIS & Remote Sensing
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="სარჩევი">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Giorgi Kapanadze · ჭიათური, საქართველო
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/ezdanapak" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://kapanadze.medium.com/" target="_blank" rel="noopener" title="Medium" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M369.4 32c43.4 0 78.6 35.2 78.6 78.6v83.8c-1.9-.1-3.8-.2-5.7-.2h-.4c-10 0-22.3 2.4-31.1 6.8-10 4.6-18.7 11.5-26 20.6-11.8 14.6-18.9 34.3-20.6 56.4-.1.7-.1 1.3-.2 2s-.1 1.2-.1 1.9c-.1 1.2-.1 2.4-.1 3.6 0 1.9-.1 3.8 0 5.8 1.2 50.1 28.2 90.2 76.3 90.2 2.7 0 5.3-.1 7.9-.4v20.4c0 43.4-35.2 78.6-78.6 78.6L78.6 480C35.2 480 0 444.8 0 401.4V110.6C0 67.2 35.2 32 78.6 32zM82.3 138.9l.3.1c13.2 3 19.8 7.4 19.8 23.4v187.2c0 16-6.7 20.4-19.9 23.4l-.3.1v2.8H135v-2.8l-.3-.1c-13.2-3-19.9-7.4-19.9-23.4V173.3l86.1 202.5h4.9l88.6-208.2v186.6c-1.1 12.6-7.8 16.5-19.7 19.2l-.3.1v2.7h91.9v-2.7l-.3-.1c-11.9-2.7-18.7-6.6-19.9-19.2l-.1-191.8h.1c0-16 6.7-20.4 19.9-23.4l.3-.1v-2.7h-72.2l-67 157.4-67-157.4H82.3zM448 340.3c-25.1-7.4-43-35.1-41.2-67.8h41.1v67.8zm-6.4-135.6c2.3 0 4.4.3 6.4.9V263h-40.2c1.5-33.6 13.6-57.9 33.8-58.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://dev.to/kapanadze" target="_blank" rel="noopener" title="Dev.to" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M120.1 208.3c-3.9-2.9-7.8-4.3-11.6-4.3H91.1v104.5h17.4c3.9 0 7.8-1.4 11.6-4.3s5.8-7.3 5.8-13.1v-69.7c0-5.8-2-10.2-5.8-13.1M404.1 32H43.9C19.7 32 .1 51.6 0 75.8v360.4C.1 460.4 19.7 480 43.9 480h360.2c24.2 0 43.8-19.6 43.9-43.8V75.8c-.1-24.2-19.7-43.8-43.9-43.8M154.2 291.2c0 18.8-11.6 47.3-48.4 47.3H59.4V173h47.4c35.4 0 47.4 28.5 47.4 47.3zm100.7-88.7h-53.3v38.4h32.6v29.6h-32.6v38.4h53.3v29.6h-62.2c-11.2.3-20.4-8.5-20.7-19.7V193.7c-.3-11.1 8.6-20.4 19.7-20.7h63.2zm103.6 115.3c-13.2 30.7-36.8 24.6-47.4 0L272.6 173h32.6l29.7 113.7L364.5 173h32.6l-38.5 144.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://sites.google.com/view/gisgeo/" target="_blank" rel="noopener" title="GIS Website" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:kapan.gio777@gmail.com" target="_blank" rel="noopener" title="Email" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-mail" viewBox="0 0 24 24"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect width="20" height="16" x="2" y="4" rx="2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":".","features":["navigation.instant","navigation.instant.prefetch","navigation.top","navigation.tracking","navigation.footer","header.autohide","search.highlight","content.code.copy","announce.dismiss"],"search":"./assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"კოპირებულია","clipboard.copy":"კოპირება","search.result.more.one":"კიდევ 1 ამ გვერდზე","search.result.more.other":"კიდევ # ამ გვერდზე","search.result.none":"დოკუმენტი ვერ მოიძებნა","search.result.one":"მოიძებნა 1 დოკუმენტი","search.result.other":"მოიძებნა # დოკუმენტი","search.result.placeholder":"ჩაწერე ძებნის დასაწყებად","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="./assets/javascripts/bundle.6e5f0216.min.js"></script>
+      
+    
+  </body>
+</html>
