@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giorgi Kapanadze — GIS & Remote Sensing</title>
+  <meta name="description" content="Geospatial developer and GIS specialist from Chiatura, Georgia. QGIS plugins, web maps, Python geospatial tools." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --accent: #10b981;
+      --accent-dim: #059669;
+      --accent-glow: rgba(16, 185, 129, 0.15);
+      --bg: #0a0f1e;
+      --bg-card: #111827;
+      --bg-card-hover: #1f2937;
+      --border: rgba(255,255,255,0.07);
+      --text: #f9fafb;
+      --text-muted: #9ca3af;
+      --text-dim: #6b7280;
+      --nav-bg: rgba(10, 15, 30, 0.85);
+      --shadow: 0 4px 24px rgba(0,0,0,0.4);
+      --radius: 12px;
+    }
+    [data-theme="light"] {
+      --bg: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border: rgba(0,0,0,0.08);
+      --text: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #94a3b8;
+      --nav-bg: rgba(248,250,252,0.85);
+      --shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--border);
+      height: 60px;
+      display: flex;
+      align-items: center;
+      padding: 0 2rem;
+    }
+    .nav-inner {
+      max-width: 1100px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: var(--accent);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+    }
+    .nav-logo span { color: var(--text-muted); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .theme-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 0.35rem 0.6rem;
+      font-size: 1rem;
+      transition: all 0.2s;
+      line-height: 1;
+    }
+    .theme-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* SECTIONS */
+    section { padding: 5rem 2rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    .section-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 1rem;
+      max-width: 560px;
+      margin-bottom: 3rem;
+    }
+
+    /* HERO */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(16,185,129,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 4rem;
+      align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--accent-glow);
+      border: 1px solid rgba(16,185,129,0.25);
+      border-radius: 100px;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.8rem;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+    .hero-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+    .hero-name {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    .hero-name .accent { color: var(--accent); }
+    .hero-title {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+      font-weight: 400;
+    }
+    .hero-location {
+      font-size: 0.875rem;
+      color: var(--text-dim);
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.65rem 1.25rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      border: 1px solid var(--accent);
+    }
+    .btn-primary:hover { background: var(--accent-dim); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .hero-avatar {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      box-shadow: 0 0 40px var(--accent-glow);
+      object-fit: cover;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .stat-value {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--accent);
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      margin-top: 0.1rem;
+    }
+
+    /* ABOUT */
+    #about { background: var(--bg-card); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .about-text p {
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      font-size: 0.975rem;
+      line-height: 1.75;
+    }
+    .about-text p strong { color: var(--text); }
+    .about-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .about-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: all 0.2s;
+      background: var(--bg);
+    }
+    .about-link:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-glow);
+    }
+    .about-link .link-icon { font-size: 1rem; min-width: 20px; }
+    .about-link .link-label { font-weight: 500; color: var(--text); margin-right: auto; }
+    .about-link:hover .link-label { color: var(--accent); }
+    .about-link .link-url { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .skill-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      transition: all 0.2s;
+    }
+    .skill-card:hover {
+      border-color: var(--accent);
+      background: var(--bg-card-hover);
+      transform: translateY(-2px);
+    }
+    .skill-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .skill-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 0.25rem;
+    }
+    .skill-desc { font-size: 0.775rem; color: var(--text-dim); }
+
+    /* PROJECTS */
+    #projects { background: var(--bg-card); }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+    .project-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      transition: all 0.25s;
+      text-decoration: none;
+      color: inherit;
+      position: relative;
+      overflow: hidden;
+    }
+    [data-theme="light"] .project-card { background: var(--bg-card-hover); }
+    .project-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--accent-glow), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .project-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+    .project-card:hover::after { opacity: 1; }
+    .project-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      position: relative; z-index: 1;
+    }
+    .project-name {
+      font-weight: 600;
+      font-size: 0.975rem;
+      color: var(--text);
+    }
+    .project-card:hover .project-name { color: var(--accent); }
+    .project-ext {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      transition: color 0.2s;
+    }
+    .project-card:hover .project-ext { color: var(--accent); }
+    .project-desc {
+      font-size: 0.825rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      flex: 1;
+      position: relative; z-index: 1;
+    }
+    .project-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative; z-index: 1;
+    }
+    .lang-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      color: var(--text-dim);
+    }
+    .lang-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .lang-py { background: #3572A5; }
+    .lang-js { background: #f1e05a; }
+    .lang-html { background: #e34c26; }
+    .lang-qgis { background: #10b981; }
+    .project-links {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .project-link {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      text-decoration: none;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      transition: all 0.15s;
+    }
+    .project-link:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      position: relative; z-index: 1;
+    }
+    .tag {
+      font-size: 0.68rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 100px;
+      background: var(--accent-glow);
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* CONTACT */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 0;
+    }
+    .contact-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      text-align: center;
+      text-decoration: none;
+      color: var(--text);
+      transition: all 0.2s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .contact-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      background: var(--bg-card-hover);
+    }
+    .contact-icon { font-size: 1.75rem; }
+    .contact-name { font-weight: 600; font-size: 0.9rem; }
+    .contact-val { font-size: 0.775rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      font-family: 'JetBrains Mono', monospace;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .hero-avatar { width: 120px; height: 120px; order: -1; }
+      .hero-stats { gap: 1.25rem; }
+      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .nav-links li:not(:last-child) { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="#hero">giorgi<span>.kapanadze</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li>
+        <button class="theme-btn" id="themeToggle" title="Toggle theme">🌙</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge">Available for collaboration</div>
+        <h1 class="hero-name">
+          Giorgi<br>
+          <span class="accent">Kapanadze</span>
+        </h1>
+        <p class="hero-title">GIS & Remote Sensing Specialist</p>
+        <p class="hero-location">📍 Chiatura, Georgia</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects →</a>
+          <a href="https://github.com/ezdanapak" class="btn btn-outline" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://sites.google.com/view/gisgeo/" class="btn btn-outline" target="_blank" rel="noopener">Website ↗</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="stat-value">10+</div>
+            <div class="stat-label">Years in GIS</div>
+          </div>
+          <div>
+            <div class="stat-value">15+</div>
+            <div class="stat-label">Projects Built</div>
+          </div>
+          <div>
+            <div class="stat-value">5+</div>
+            <div class="stat-label">QGIS Plugins</div>
+          </div>
+        </div>
+      </div>
+      <img
+        class="hero-avatar"
+        src="https://avatars.githubusercontent.com/u/36360197?v=4"
+        alt="Giorgi Kapanadze"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="section-tag">About</p>
+        <h2 class="section-title">Mapping the world,<br>one dataset at a time.</h2>
+        <p>
+          I'm a <strong>GIS & Remote Sensing specialist</strong> from Chiatura, Georgia with deep expertise in geospatial analysis, spatial data infrastructure, and open-source GIS tools.
+        </p>
+        <p>
+          I develop <strong>QGIS plugins</strong>, <strong>Python geospatial packages</strong>, and <strong>interactive web maps</strong> — turning complex spatial data into actionable insights.
+        </p>
+        <p>
+          My work spans urban 3D city modelling (CityGML), satellite image analysis, cloud GIS infrastructure, and educational GIS platforms.
+        </p>
+        <p>
+          Active contributor to the open-source geospatial community and instructor at <strong>BTU (Business and Technology University)</strong>.
+        </p>
+      </div>
+      <div>
+        <p class="section-tag">Find me at</p>
+        <div class="about-links">
+          <a href="https://github.com/ezdanapak" target="_blank" rel="noopener" class="about-link">
+            <span class="link-icon">🐙</span>
+            <span class="link-label">GitHub</span>
+            <span class="link-url">ezdanapak</span>
+          </a>
+          <a href="https://kapanadze.medium.com/" target="_blank" rel="noopener" class="about-link">
+            <span class="link-icon">✍️</span>
+            <span class="link-label">Medium</span>
+            <span class="link-url">kapanadze.medium.com</span>
+          </a>
+          <a href="https://dev.to/kapanadze" target="_blank" rel="noopener" class="about-link">
+            <span class="link-icon">💻</span>
+            <span class="link-label">Dev.to</span>
+            <span class="link-url">dev.to/kapanadze</span>
+          </a>
+          <a href="https://sites.google.com/view/gisgeo/" target="_blank" rel="noopener" class="about-link">
+            <span class="link-icon">🌐</span>
+            <span class="link-label">GIS Website</span>
+            <span class="link-url">gisgeo</span>
+          </a>
+          <a href="mailto:kapan.gio777@gmail.com" class="about-link">
+            <span class="link-icon">📧</span>
+            <span class="link-label">Email</span>
+            <span class="link-url">kapan.gio777@gmail.com</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <p class="section-tag">Skills</p>
+    <h2 class="section-title">Tech Stack</h2>
+    <p class="section-desc">Tools and technologies I use to build geospatial solutions.</p>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon">🗺️</div>
+        <div class="skill-name">QGIS</div>
+        <div class="skill-desc">Plugin development, processing algorithms, custom workflows</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🐍</div>
+        <div class="skill-name">Python</div>
+        <div class="skill-desc">GeoPandas, Shapely, Rasterio, PyQGIS, Fiona</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🛰️</div>
+        <div class="skill-name">Remote Sensing</div>
+        <div class="skill-desc">Satellite imagery analysis, spectral indices, change detection</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🌍</div>
+        <div class="skill-name">Web Mapping</div>
+        <div class="skill-desc">Leaflet, MapLibre, OpenLayers, Mapbox</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🏙️</div>
+        <div class="skill-name">3D City Models</div>
+        <div class="skill-desc">CityGML, 3D City Database, LoD modelling</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">☁️</div>
+        <div class="skill-name">Google Earth Engine</div>
+        <div class="skill-desc">Cloud geospatial processing, large-scale analysis</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🗄️</div>
+        <div class="skill-name">Spatial Databases</div>
+        <div class="skill-desc">PostGIS, PostgreSQL, GeoServer, GeoNetwork</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🐳</div>
+        <div class="skill-name">Docker & DevOps</div>
+        <div class="skill-desc">Containerised GIS services, CI/CD for geospatial apps</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">⚡</div>
+        <div class="skill-name">JavaScript</div>
+        <div class="skill-desc">Interactive maps, web apps, Node.js</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <p class="section-tag">Projects</p>
+    <h2 class="section-title">Featured Work</h2>
+    <p class="section-desc">Open-source GIS tools, web maps, and geospatial applications.</p>
+    <div class="projects-grid">
+
+      <!-- Transliterator -->
+      <a class="project-card" href="https://github.com/ezdanapak/transliterator" target="_blank" rel="noopener">
+        <div class="project-header">
+          <span class="project-name">Transliterator</span>
+          <span class="project-ext">↗</span>
+        </div>
+        <p class="project-desc">QGIS plugin for Georgian–English transliteration of map labels and attribute values. Simplifies multilingual cartography workflows.</p>
+        <div class="project-tags">
+          <span class="tag">QGIS Plugin</span>
+          <span class="tag">PyQGIS</span>
+          <span class="tag">Georgian</span>
+        </div>
+        <div class="project-footer">
+          <span class="lang-badge"><span class="lang-dot lang-py"></span>Python</span>
+          <div class="project-links">
+            <a href="https://ezdanapak.github.io/transliterator/" class="project-link" onclick="event.stopPropagation()" target="_blank" rel="noopener">Demo ↗</a>
+          </div>
+        </div>
+      </a>
+
+      <!-- 3DCityDB -->
+      <a class="project-card" href="https://github.com/ezdanapak/3DCityDB-Tools-for-QGIS" target="_blank" rel="noopener">
+        <div class="project-header">
+          <span class="project-name">3DCityDB Tools for QGIS</span>
+          <span class="project-ext">↗</span>
+        </div>
+        <p class="project-desc">QGIS plugin for CityGML 3D City Database data handling. Enables seamless import, export, and management of 3D urban models in QGIS.</p>
+        <div class="project-tags">
+          <span class="tag">CityGML</span>
+          <span class="tag">3D City</span>
+          <span class="tag">QGIS Plugin</span>
+        </div>
+        <div class="project-footer">
+          <span class="lang-badge"><span class="lang-dot lang-qgis"></span>QGIS</span>
+        </div>
+      </a>
+
+      <!-- mygeodev -->
+      <a class="project-card" href="https://github.com/ezdanapak/mygeodev" target="_blank" rel="noopener">
+        <div class="project-header">
+          <span class="project-name">mygeodev</span>
+          <span class="project-ext">↗</span>
+        </div>
+        <p class="project-desc">Personal Python package for geospatial analysis and mapping. Provides reusable tools for common GIS workflows and spatial data processing.</p>
+        <div class="project-tags">
+          <span class="tag">geospatial</span>
+          <span class="tag">map</span>
+          <span class="tag">package</span>
+        </div>
+        <div class="project-footer">
+          <span class="lang-badge"><span class="lang-dot lang-py"></span>Python</span>
+        </div>
+      </a>
+
+      <!-- South Caucasus Energy -->
+      <a class="project-card" href="https://github.com/ezdanapak/SCE" target="_blank" rel="noopener">
+        <div class="project-header">
+          <span class="project-name">South Caucasus Energy Map</span>
+          <span class="project-ext">↗</span>
+        </div>
+        <p class="project-desc">Interactive map of controversial and alternative energy projects in the South Caucasus region. Visualises green energy, pipelines, and infrastructure.</p>
+        <div class="project-tags">
+          <span class="tag">caucasus</span>
+          <span class="tag">energy</span>
+          <span class="tag">map</span>
+        </div>
+        <div class="project-footer">
+          <span class="lang-badge"><span class="lang-dot lang-js"></span>JavaScript</span>
+        </div>
+      </a>
+
+      <!-- BTU-GIS -->
+      <a class="project-card" href="https://github.com/ezdanapak/BTU-GIS" target="_blank" rel="noopener">
+        <div class="project-header">
+          <span class="project-name">BTU-GIS</span>
+          <span class="project-ext">↗</span>
+        </div>
+        <p class="project-desc">Geographic Information Systems course platform for Business and Technology University. Educational materials, labs, and interactive GIS exercises.</p>
+        <div class="project-tags">
+          <span class="tag">Education</span>
+          <span class="tag">GIS Course</span>
+        </div>
+        <div class="project-footer">
+          <span class="lang-badge"><span class="lang-dot lang-html"></span>HTML</span>
+        </div>
+      </a>
+
+      <!-- Chiatura City -->
+      <a class="project-card" href="https://github.com/ezdanapak/chiatura_city" target="_blank" rel="noopener">
+        <div class="project-header">
+          <span class="project-name">Chiatura City Map</span>
+          <span class="project-ext">↗</span>
+        </div>
+        <p class="project-desc">Interactive web map of Chiatura — a historic mining city in Georgia known for its Soviet-era cable cars. Showcases spatial storytelling techniques.</p>
+        <div class="project-tags">
+          <span class="tag">Web Map</span>
+          <span class="tag">Chiatura</span>
+        </div>
+        <div class="project-footer">
+          <span class="lang-badge"><span class="lang-dot lang-js"></span>JavaScript</span>
+        </div>
+      </a>
+
+      <!-- QGIS Georgia -->
+      <a class="project-card" href="https://github.com/ezdanapak/QGIS_GEORGIA" target="_blank" rel="noopener">
+        <div class="project-header">
+          <span class="project-name">QGIS Georgia</span>
+          <span class="project-ext">↗</span>
+        </div>
+        <p class="project-desc">Official website for the QGIS Georgia User Group. Community hub for Georgian GIS professionals using open-source geospatial tools.</p>
+        <div class="project-tags">
+          <span class="tag">QGIS Community</span>
+          <span class="tag">Georgia</span>
+        </div>
+        <div class="project-footer">
+          <span class="lang-badge"><span class="lang-dot lang-html"></span>HTML</span>
+        </div>
+      </a>
+
+      <!-- URL Decoder -->
+      <a class="project-card" href="https://github.com/ezdanapak/URL-Decoder" target="_blank" rel="noopener">
+        <div class="project-header">
+          <span class="project-name">URL Decoder</span>
+          <span class="project-ext">↗</span>
+        </div>
+        <p class="project-desc">Lightweight web app for encoding and decoding URLs. Clean interface for developers working with percent-encoded strings and query parameters.</p>
+        <div class="project-tags">
+          <span class="tag">encoding</span>
+          <span class="tag">decoding</span>
+          <span class="tag">url</span>
+        </div>
+        <div class="project-footer">
+          <span class="lang-badge"><span class="lang-dot lang-html"></span>HTML</span>
+          <div class="project-links">
+            <a href="https://url.kapanadze.dev/" class="project-link" onclick="event.stopPropagation()" target="_blank" rel="noopener">Live ↗</a>
+          </div>
+        </div>
+      </a>
+
+      <!-- MyDevOps -->
+      <a class="project-card" href="https://github.com/ezdanapak/MyDevOps" target="_blank" rel="noopener">
+        <div class="project-header">
+          <span class="project-name">MyDevOps</span>
+          <span class="project-ext">↗</span>
+        </div>
+        <p class="project-desc">Comprehensive DevOps documentation site covering infrastructure, CI/CD pipelines, containerisation, and cloud deployment strategies.</p>
+        <div class="project-tags">
+          <span class="tag">dev</span>
+          <span class="tag">ops</span>
+          <span class="tag">documentation</span>
+        </div>
+        <div class="project-footer">
+          <span class="lang-badge"><span class="lang-dot lang-html"></span>HTML</span>
+          <div class="project-links">
+            <a href="https://ezdanapak.github.io/MyDevOps/" class="project-link" onclick="event.stopPropagation()" target="_blank" rel="noopener">Docs ↗</a>
+          </div>
+        </div>
+      </a>
+
+      <!-- R-test -->
+      <a class="project-card" href="https://github.com/ezdanapak/R-test" target="_blank" rel="noopener">
+        <div class="project-header">
+          <span class="project-name">Ishihara Color Test</span>
+          <span class="project-ext">↗</span>
+        </div>
+        <p class="project-desc">Interactive Ishihara color vision test application. Useful for cartographers when designing accessible colour palettes for maps.</p>
+        <div class="project-tags">
+          <span class="tag">Colour Vision</span>
+          <span class="tag">Cartography</span>
+        </div>
+        <div class="project-footer">
+          <span class="lang-badge"><span class="lang-dot lang-py"></span>Python</span>
+        </div>
+      </a>
+
+      <!-- Winter Roads -->
+      <a class="project-card" href="https://github.com/ezdanapak/wrm" target="_blank" rel="noopener">
+        <div class="project-header">
+          <span class="project-name">Winter Roads — ზამთრის გზები</span>
+          <span class="project-ext">↗</span>
+        </div>
+        <p class="project-desc">Interactive map visualisation of winter road conditions in Georgia. Real-time data layer showcasing road accessibility during winter months.</p>
+        <div class="project-tags">
+          <span class="tag">Web Map</span>
+          <span class="tag">Georgia</span>
+        </div>
+        <div class="project-footer">
+          <span class="lang-badge"><span class="lang-dot lang-js"></span>JavaScript</span>
+        </div>
+      </a>
+
+      <!-- CounterNG -->
+      <a class="project-card" href="https://github.com/ezdanapak/CounterNG" target="_blank" rel="noopener">
+        <div class="project-header">
+          <span class="project-name">CounterNG</span>
+          <span class="project-ext">↗</span>
+        </div>
+        <p class="project-desc">A clean, customisable countdown timer web application — დროის უკუღმა მთვლელი. Minimal design with precision timing.</p>
+        <div class="project-tags">
+          <span class="tag">Web App</span>
+          <span class="tag">Timer</span>
+        </div>
+        <div class="project-footer">
+          <span class="lang-badge"><span class="lang-dot lang-html"></span>HTML</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <p class="section-tag">Contact</p>
+    <h2 class="section-title">Get in Touch</h2>
+    <p class="section-desc">Open to GIS consulting, collaboration, and open-source contributions.</p>
+    <div class="contact-grid">
+      <a href="https://github.com/ezdanapak" target="_blank" rel="noopener" class="contact-card">
+        <span class="contact-icon">🐙</span>
+        <span class="contact-name">GitHub</span>
+        <span class="contact-val">ezdanapak</span>
+      </a>
+      <a href="mailto:kapan.gio777@gmail.com" class="contact-card">
+        <span class="contact-icon">📧</span>
+        <span class="contact-name">Email</span>
+        <span class="contact-val">kapan.gio777</span>
+      </a>
+      <a href="https://kapanadze.medium.com/" target="_blank" rel="noopener" class="contact-card">
+        <span class="contact-icon">✍️</span>
+        <span class="contact-name">Medium</span>
+        <span class="contact-val">kapanadze</span>
+      </a>
+      <a href="https://dev.to/kapanadze" target="_blank" rel="noopener" class="contact-card">
+        <span class="contact-icon">💻</span>
+        <span class="contact-name">Dev.to</span>
+        <span class="contact-val">kapanadze</span>
+      </a>
+      <a href="https://sites.google.com/view/gisgeo/" target="_blank" rel="noopener" class="contact-card">
+        <span class="contact-icon">🌐</span>
+        <span class="contact-name">GIS Site</span>
+        <span class="contact-val">gisgeo</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    Built with ♥ by <a href="https://github.com/ezdanapak">Giorgi Kapanadze</a> · Chiatura, Georgia ·
+    <a href="https://github.com/ezdanapak/ezdanapak.github.io">Source</a>
+  </p>
+</footer>
+
+<script>
+  const toggle = document.getElementById('themeToggle');
+  const html = document.documentElement;
+  const saved = localStorage.getItem('theme') || 'dark';
+  html.setAttribute('data-theme', saved);
+  toggle.textContent = saved === 'dark' ? '☀️' : '🌙';
+
+  toggle.addEventListener('click', () => {
+    const current = html.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    toggle.textContent = next === 'dark' ? '☀️' : '🌙';
+  });
+
+  // smooth active nav link
+  const sections = document.querySelectorAll('section[id]');
+  const links = document.querySelectorAll('.nav-links a');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.style.color = '');
+        const active = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+        if (active) active.style.color = 'var(--accent)';
+      }
+    });
+  }, { threshold: 0.4 });
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
